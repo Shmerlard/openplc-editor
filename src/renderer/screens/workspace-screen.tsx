@@ -1813,7 +1813,7 @@ const WorkspaceScreen = () => {
         <ResizablePanelGroup
           id='mainContentPanelGroup'
           direction='horizontal'
-          className='relative flex h-full w-full gap-2'
+          className='relative flex h-full w-full gap-1'
         >
           <Explorer collapse={explorerPanelRef} />
 
@@ -1829,18 +1829,18 @@ const WorkspaceScreen = () => {
               hitAreaMargins={{ coarse: 3, fine: 3 }}
               className='absolute bottom-0 top-0 z-[99] my-[2px] w-[4px] py-2 transition-colors duration-200 data-[resize-handle-active="pointer"]:bg-brand-light data-[resize-handle-state="hover"]:bg-brand-light data-[resize-handle-active="pointer"]:dark:bg-neutral-700  data-[resize-handle-state="hover"]:dark:bg-neutral-700'
             />
-            <div id='workspaceContentPanel' className='flex h-full flex-1 grow flex-col gap-2 overflow-hidden'>
+            <div id='workspaceContentPanel' className='flex h-full flex-1 grow flex-col gap-1 overflow-hidden'>
               {tabs.length > 0 && <Navigation />}
-              <ResizablePanelGroup id='editorPanelGroup' className={`flex h-full gap-2`} direction='vertical'>
+              <ResizablePanelGroup id='editorPanelGroup' className={`flex h-full gap-1`} direction='vertical'>
                 <ResizablePanel
                   id='editorPanel'
                   order={1}
                   minSize={45}
                   defaultSize={75}
                   className={cn(
-                    'relative  flex flex-1 grow flex-col overflow-hidden rounded-lg border-2 border-neutral-200 bg-white px-4 py-4 dark:border-neutral-800 dark:bg-neutral-950',
+                    'relative  flex flex-1 grow flex-col overflow-hidden rounded-lg border-2 border-neutral-200 bg-white p-1 dark:border-neutral-800 dark:bg-neutral-950',
                     {
-                      'py-0 pb-4': isVariablesPanelCollapsed,
+                      'py-0 pb-1': isVariablesPanelCollapsed,
                     },
                   )}
                 >
@@ -1892,7 +1892,7 @@ const WorkspaceScreen = () => {
                             collapsedSize={0}
                             defaultSize={25}
                             minSize={20}
-                            className={`relative flex h-full w-full flex-1 flex-col gap-4 overflow-auto`}
+                            className={`relative flex h-full w-full flex-1 flex-col gap-1 overflow-auto`}
                           >
                             <VariablesEditor />
                           </ResizablePanel>
@@ -1907,7 +1907,7 @@ const WorkspaceScreen = () => {
                             defaultSize={75}
                             id='textualEditorPanel'
                             order={2}
-                            className='mt-4 flex-1 flex-grow rounded-md'
+                            className='mt-1 flex-1 flex-grow rounded-md'
                           >
                             {editor['type'] === 'plc-textual' ? (
                               <MonacoEditor
