@@ -1950,8 +1950,8 @@ const WorkspaceScreen = () => {
                   order={2}
                   collapsible
                   defaultSize={31}
-                  minSize={22}
-                  className='flex-1 grow  rounded-lg border-2 border-neutral-200 bg-white p-4 data-[panel-size="0.0"]:hidden dark:border-neutral-800 dark:bg-neutral-950'
+                  minSize={10}
+                  className='flex-1 grow  rounded-lg border-2 border-neutral-200 bg-white p-1 data-[panel-size="0.0"]:hidden dark:border-neutral-800 dark:bg-neutral-950'
                 >
                   <Tabs.Root
                     value={activeTab}
